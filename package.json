@@ -1,6 +1,6 @@
 {
   "name": "@shareable-configs/renovate-config",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "publishConfig": {
     "access": "public"
   },
@@ -18,28 +18,15 @@
   },
   "homepage": "https://github.com/shareable-configs/renovate-config#readme",
   "bugs": "https://github.com/shareable-configs/renovate-config/issues",
+  "files": [
+    "default.json"
+  ],
   "scripts": {
-    "validate": "renovate-config-validator",
+    "validate": "renovate-config-validator default.json",
     "test": "pnpm run validate",
     "prepare": "pnpm run test"
   },
   "devDependencies": {
     "renovate": "^37.56.3"
-  },
-  "files": [],
-  "renovate-config": {
-    "default": {
-      "extends": [
-        "config:recommended"
-      ],
-      "packageRules": [
-        {
-          "matchDepTypes": [
-            "devDependencies"
-          ],
-          "commitMessageTopic": "devDependency {{{depName}}}"
-        }
-      ]
-    }
   }
 }

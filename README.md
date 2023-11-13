@@ -4,23 +4,13 @@ Shared presets for [Renovate](https://github.com/singapore/renovate) tool.
 
 ## Usage
 
-Add `renovate` property into `package.json`:
+Add this into `renovate.json`, `renovate.json5`, `.github/renovate.json`,
+`.github/renovate.json5`, `.gitlab/renovate.json`, `.gitlab/renovate.json5`,
+`.renovaterc`, `.renovaterc.json` or `.renovaterc.json5` file:
 
 ```json
 {
-  "renovate": {
-    "extends": ["@shareable-configs"]
-  }
-}
-```
-
-or add this into `renovate.json`:
-
-```json
-{
-  "extends": [
-    "@shareable-configs"
-  ]
+  "extends": ["github>shareable-configs/renovate-config"]
 }
 ```
 
