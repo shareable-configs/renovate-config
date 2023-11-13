@@ -1,0 +1,45 @@
+{
+  "name": "@shareable-configs/renovate-config",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "shareable",
+    "config",
+    "renovate"
+  ],
+  "description": "Shared presets for [Renovate](https://github.com/singapore/renovate) tool.",
+  "author": "TechnoWong (http://github.com/TechnoWong)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shareable-configs/renovate-config"
+  },
+  "homepage": "https://github.com/shareable-configs/renovate-config#readme",
+  "bugs": "https://github.com/shareable-configs/renovate-config/issues",
+  "scripts": {
+    "validate": "renovate-config-validator",
+    "test": "pnpm run validate",
+    "prepare": "pnpm run test"
+  },
+  "devDependencies": {
+    "renovate": "^37.56.3"
+  },
+  "files": [],
+  "renovate-config": {
+    "default": {
+      "extends": [
+        "config:recommended"
+      ],
+      "packageRules": [
+        {
+          "matchDepTypes": [
+            "devDependencies"
+          ],
+          "commitMessageTopic": "devDependency {{{depName}}}"
+        }
+      ]
+    }
+  }
+}

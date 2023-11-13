@@ -1,0 +1,21 @@
+{
+  "extends": ["@shareable-configs"],
+  "timezone": "Asia/Shanghai",
+  "labels": ["renovate"],
+  "lockFileMaintenance": {
+    "automerge": true,
+    "platformAutomerge": true
+  },
+  "packageRules": [
+    {
+      "groupName": "all deps(non-major) except Renovates",
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "excludeDepNames": ["renovate"]
+    },
+    {
+      "groupName": "renovates dependency",
+      "matchPackageNames": ["renovate"]
+    }
+  ]
+}
