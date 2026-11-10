@@ -27,6 +27,6 @@
     "prepare": "pnpm run test"
   },
   "devDependencies": {
-    "renovate": "^37.56.3"
+    "renovate": "^44.0.0"
   }
 }
